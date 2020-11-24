@@ -121,39 +121,42 @@
 								Nuevo producto
 							</div>
 							<div class="full-width panel-content">
-								<form>
+								<form method="post">
 									<div class="mdl-grid">
 										<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
 											<h5 class="text-condensedLight">Datos del producto</h5>
 
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9áéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="NombreUsuario">
+												<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9áéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="NombreUsuario" 
+												name="NombreUsuario">
 												<label class="mdl-textfield__label" for="NombreUsuario">Nombre usuario</label>
 												<span class="mdl-textfield__error">Invalid name</span>
 											</div>
 
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="number" pattern="-?[0-9- ]*(\.[0-9]+)?" id="BarCode">
+												<input class="mdl-textfield__input" type="number" pattern="-?[0-9- ]*(\.[0-9]+)?" id="BarCode" name="BarCode">
 												<label class="mdl-textfield__label" for="BarCode">Codigo de producto</label>
 												<span class="mdl-textfield__error">Invalid barcode</span>
 											</div>
 
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9áéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="NombreProducto">
+												<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9áéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="NombreProducto" 
+												name="NombreProducto">
 												<label class="mdl-textfield__label" for="NombreProducto">Nombre producto</label>
 												<span class="mdl-textfield__error">Invalid name</span>
 											</div>
 
-											<div class="mdl-textfield mdl-js-textfield">
-												<select class="mdl-textfield__input">
-													<option value="" disabled="" selected="">Seleccione tipo de producto</option>
-													<option value="">Repuesto</option>
-													<option value="">Herramienta</option>
-												</select>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9áéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="tipo" 
+												name="tipo">
+												<label class="mdl-textfield__label" for="tipo">Tipo de producto</label>
+												<span class="mdl-textfield__error">Invalid name</span>
 											</div>
 
+											
+
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text" pattern="-?[0-9.]*(\.[0-9]+)?" id="CantidadProducto">
+												<input class="mdl-textfield__input" type="number" pattern="-?[0-9.]*(\.[0-9]+)?" id="CantidadProducto" name="CantidadProducto">
 												<label class="mdl-textfield__label" for="CantidadProducto">Cantidad</label>
 												<span class="mdl-textfield__error">Invalid price</span>
 											</div>
@@ -165,25 +168,28 @@
 											<h5 class="text-condensedLight">Datos del producto</h5>
 											
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text" id="MarcaProducto">
+												<input class="mdl-textfield__input" type="text" id="MarcaProducto" 
+												name="MarcaProducto">
 												<label class="mdl-textfield__label" for="MarcaProducto">Marca</label>
 												<span class="mdl-textfield__error">Invalid Mark</span>
 											</div>
 
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text"  id="ModeloProducto">
+												<input class="mdl-textfield__input" type="text"  id="ModeloProducto"
+												name="ModeloProducto">
 												<label class="mdl-textfield__label" for="ModeloProducto">Modelo</label>
 												<span class="mdl-textfield__error">Invalid model</span>
 											</div>
 
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text" id="SerieProducto">
+												<input class="mdl-textfield__input" type="text" id="SerieProducto"
+												name="SerieProducto">
 												<label class="mdl-textfield__label" for="SerieProducto">Serie</label>
 												<span class="mdl-textfield__error">Invalid serial</span>
 											</div>
 
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text" pattern="-?[0-9.]*(\.[0-9]+)?" id="PrecioProducto">
+												<input class="mdl-textfield__input" type="number" pattern="-?[0-9.]*(\.[0-9]+)?" id="PrecioProducto" name="PrecioProducto">
 												<label class="mdl-textfield__label" for="PrecioProducto">Precio</label>
 												<span class="mdl-textfield__error">Invalid price</span>
 											</div>
@@ -194,12 +200,15 @@
 
 									<p class="text-center">
 
-										<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored bg-primary" id="btn-addProduct">
+										<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored bg-primary" id="btn-addProduct" name="btn_registro">
 											<i class="zmdi zmdi-plus"></i>
 										</button>
 										<div class="mdl-tooltip" for="btn-addProduct">Ingresar producto</div>
 									</p>
 								</form>
+								<?php
+								include("registrar.php");
+								?>
 							</div>
 						</div>
 					</div>

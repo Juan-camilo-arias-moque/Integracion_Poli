@@ -1,4 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
 <style>
 
 table 
@@ -39,8 +42,12 @@ cursor: pointer;
 width: 40%;
 }
 </style>
-<center>
-<form method="post" action="index.php">
+</head>
+
+<body>
+
+<div align="center">
+<form method="post" action="login.php" >
 <table>
 
 <tr><td colspan="2" style="background-color:#33A8DB; padding-bottom:5px; padding-top:5px;"><label>Login</label></td></tr>
@@ -52,5 +59,11 @@ width: 40%;
 
 </table>
 </form>
-</center>
+<?php
+include("login.php");
+?>
+</div>
+</body>
+
+
 </html>
