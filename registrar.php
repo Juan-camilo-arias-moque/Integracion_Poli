@@ -16,20 +16,14 @@ if (isset($_POST['btn_registro'])){
 		$consulta = "INSERT INTO productos(nombre_usuario, codigo, nombre_producto, tipo, cantidad, marca, modelo, serie, precio) VALUES ('$NombreUsuario',$BarCode ,'$NombreProducto' ,'$tipo' ,'$CantidadProducto' ,'$MarcaProducto' ,'$ModeloProducto' ,'$SerieProducto',$PrecioProducto)";
 		$resultado = mysqli_query($conn,$consulta);
 		if ($resultado) {
-			?>
-			<h3> ingresado</h3>
-			<?php
+			echo '<script language="javascript">alert("Producto ingresado exitosamente");</script>';
 		}else {
-			?>
-			<h3> no paila</h3>
-			<?php
+			echo '<script language="javascript">alert("El producto no fue ingresado");</script>';
 		}
 		
 		
 	}   else {
-		?>
-		<h3> completar los campos</h3>
-		<?php
+		echo '<script language="javascript">alert("Por favor complete todos los campos");</script>';
 	}
 			
 }
