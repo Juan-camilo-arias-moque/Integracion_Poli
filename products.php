@@ -217,22 +217,51 @@
 
 			<div class="mdl-tabs__panel" id="tabListProducts">
 				<div class="mdl-grid">
-					<h5 class="text-condensedLight">Seleccione la lupa e ingrese el criterio de busqueda</h5>
-					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
-						<form action="#">
-							<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-								<label class="mdl-button mdl-js-button mdl-button--icon" for="BuscarProducto">
-									<i class="zmdi zmdi-search"></i>
-								</label>
+					<h5 class="text-condensedLight">Seleccione el criterio de busqueda ,luego ingrese el dato a buscar y de clic en buscar </h5>
+					
+					<div class="full-width panel-content">
+								<form method="post">
+									<div class="mdl-grid">
+										<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
+											<h5 class="text-condensedLight">seleccione criterio de busqueda</h5>
 
-								<div class="mdl-textfield__expandable-holder">
-									<input class="mdl-textfield__input" type="text" id="BuscarProducto">
-									<label class="mdl-textfield__label"></label>
-								</div>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<select  class="mdl-textfield__input" id="Criterio" name="Criterio">
+   													<option value="seleccionar"selected>seleccionar</option>
+    												<option value="nombre_usuario">NombreUsuario</option>
+    												<option value="nombre_producto">Nombre de producto</option>
+    												<option value="codigo">Codigo</option>
+    												<option value="tipo">Tipo</option>
+    												<option value="marca">Marca</option>
+    												<option value="modelo">modelo</option>
+    												<option value="serie">serie</option>
+  												</select>
+											</div>
+										</div>
+
+										<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
+											<h5 class="text-condensedLight">Dato a consultar</h5>
+											
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="text" id="DatoBusqueda" 
+												name="DatoBusqueda">
+												<label class="mdl-textfield__label" for="DatoBusqueda">Dato a consultar</label>
+												<span class="mdl-textfield__error">Invalid Date</span>
+											</div>	
+										</div>
+									</div>
+
+									<p class="text-center">
+										<button class="mdl-button mdl-js-button mdl-button--fab--colored bg-primary" id="btn_consulta" name="btn_consulta">
+											buscar
+										</button>
+										<div class="mdl-tooltip" for="btn_consulta">buscar producto</div>
+									</p>
+								</form>
+								<?php
+								include("buscar.php");
+								?>
 							</div>
-						</form>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>

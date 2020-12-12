@@ -105,37 +105,10 @@
 			</div>
 		</section>
 		<div class="full-width divider-menu-h"></div>
-		<div class="mdl-grid">
-			<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
-				<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width table-responsive">
-					<thead>
-						<tr>
-							<th class="mdl-data-table__cell--non-numeric">Nombre Usuario</th>
-							<th>Codigo producto</th>
-							<th>Nombre producto</th>
-							<th>Tipo de producto</th>
-							<th>Marca</th>
-							<th>Modelo</th>
-							<th>Serie</th>
-							<th>Cantidad</th>
-							<th>Precio</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="mdl-data-table__cell--non-numeric">usuario</td>
-							<td>codigo</td>
-							<td>nombre producto</td>
-							<td>tipo</td>
-							<td>marca</td>
-							<td>modelo</td>
-							<td>serie</td>
-							<td>cantidad</td>
-							<td>precio</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+		</div>
+		<?php
+		include("inventario.php");
+		?>
 		</div>
 	</section>
 </body>
